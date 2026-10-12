@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budhera Pranadeep Goud | FinCrime Analyst</title>
+    <title>Budhera Pranadeep Goud | FinCrime & Intelligence Command Center</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js -->
@@ -225,15 +225,15 @@
         </div>
     </section>
 
-    <!-- CHAPTER 2: THE FORENSIC RECORD & RISK MATRIX -->
+    <!-- CHAPTER 2: THE FORENSIC RECORD, RISK MATRIX & SANCTIONS WORKBENCH -->
     <section id="ch2" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-800/80">
         <div class="space-y-8">
             <div>
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full chapter-badge text-brand-cyan text-xs font-mono tracking-widest mb-3">
-                    CHAPTER 02 // REAL-WORLD CASE STUDIES & RISK MATRIX
+                    CHAPTER 02 // FORENSICS & SANCTIONS WORKBENCH
                 </div>
-                <h2 class="text-3xl font-black card-heading">Forensic Investigation Record & Risk Matrix</h2>
-                <p class="card-text-muted text-sm mt-1">Click through case studies or test the interactive decisioning matrix below.</p>
+                <h2 class="text-3xl font-black card-heading">Forensic Investigation & Sanctions Workbench</h2>
+                <p class="card-text-muted text-sm mt-1">Explore real-world case studies and test the interactive screening resolution tools below.</p>
             </div>
 
             <!-- Interactive Case Switcher -->
@@ -357,6 +357,32 @@
                 </div>
             </div>
 
+            <!-- NEW FEATURE 1: SANCTIONS & PEP ENTITY RESOLUTION WORKBENCH -->
+            <div class="story-card p-6 rounded-2xl space-y-4 font-mono">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <span class="text-xs text-brand-cyan font-bold uppercase">// SANCTIONS & PEP ENTITY RESOLUTION WORKBENCH</span>
+                    <span class="text-[10px] bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30 px-2 py-0.5 rounded">LexisNexis & Dow Jones World-Check Simulator</span>
+                </div>
+                <p class="text-xs card-text-muted">Select an entity screening match to execute 1LoD resolution protocol:</p>
+
+                <div class="flex flex-wrap gap-2 text-xs border-b border-slate-800 pb-3">
+                    <button onclick="runSanctionSim('pep_false')" id="sancBtn-pep_false" class="sanc-btn active px-3 py-1.5 rounded bg-brand-cyan text-slate-950 font-bold">PROFILE A: PEP NAME MATCH (FALSE POSITIVE)</button>
+                    <button onclick="runSanctionSim('sdn_true')" id="sancBtn-sdn_true" class="sanc-btn px-3 py-1.5 rounded story-card text-slate-300">PROFILE B: EU/OFAC SANCTIONS (TRUE MATCH)</button>
+                </div>
+
+                <div id="sanctionDisplayBox" class="bg-slate-950 p-5 rounded-xl text-xs space-y-3 border border-slate-800 leading-relaxed">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                        <span class="text-brand-cyan font-bold"><i class="fa-solid fa-user-tag mr-1"></i> ENTITY FLAG: Vladimir Petrov (PEP Screening Match)</span>
+                        <span class="text-[10px] bg-brand-amber/10 text-brand-amber px-2 py-0.5 rounded border border-brand-amber/30">92% Name Similarity</span>
+                    </div>
+                    <div class="space-y-2 text-slate-300">
+                        <p><strong class="text-white">World-Check Record:</strong> PEP Match — Regional Minister, Eastern Europe (DOB: 1978-04-12).</p>
+                        <p><strong class="text-white">Primary Document & OSINT Audit:</strong> Customer passport reveals DOB: 1991-09-24, differing national ID, and verified non-PEP corporate employment in Munich, Germany.</p>
+                        <p><strong class="text-white">1LoD Resolution Rationale:</strong> False Positive match confirmed based on DOB and identity dissimilarity. Case documented with registry proof and cleared for standard onboarding.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- RISK MATRIX & DECISION TREE -->
             <div class="story-card p-6 rounded-2xl space-y-4 font-mono">
                 <div class="flex items-center justify-between border-b border-slate-800 pb-3">
@@ -407,15 +433,46 @@
         </div>
     </section>
 
-    <!-- CHAPTER 3: INTERACTIVE TYPOLOGY ENCYCLOPEDIA -->
+    <!-- CHAPTER 3: INTERACTIVE TYPOLOGY ENCYCLOPEDIA & BLOCKCHAIN TRACER -->
     <section id="ch3" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-800/80">
         <div class="space-y-8">
             <div>
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full chapter-badge text-brand-cyan text-xs font-mono tracking-widest mb-3">
-                    CHAPTER 03 // FINCRIME TYPOLOGY ENCYCLOPEDIA
+                    CHAPTER 03 // TYPOLOGY & BLOCKCHAIN TRACER
                 </div>
-                <h2 class="text-3xl font-black card-heading">Interactive FinCrime & Fraud Typology Suite</h2>
-                <p class="card-text-muted text-sm mt-1">Explore core financial crime typologies I independently investigate and dismantle across fiat and digital assets.</p>
+                <h2 class="text-3xl font-black card-heading">FinCrime Typologies & On-Chain Flow Tracer</h2>
+                <p class="card-text-muted text-sm mt-1">Explore core financial crime typologies and test the interactive blockchain transaction flow tracer below.</p>
+            </div>
+
+            <!-- NEW FEATURE 2: INTERACTIVE CRYPTOCURRENCY TRANSACTION FLOW TRACER -->
+            <div class="story-card p-6 rounded-2xl space-y-4 font-mono">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <span class="text-xs text-brand-emerald font-bold uppercase">// ON-CHAIN CRYPTOCURRENCY FLOW TRACER (CHAINALYSIS / TRM MOCKUP)</span>
+                    <span class="text-[10px] bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/30 px-2 py-0.5 rounded">3-Hop Risk Forensics</span>
+                </div>
+                <p class="text-xs card-text-muted">Click any node on the transaction graph to view on-chain forensics and compliance disposition:</p>
+
+                <!-- Flow Visualizer Nodes -->
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 text-center text-xs">
+                    <button onclick="inspectCryptoNode(1)" id="cryptoNode-1" class="crypto-node-btn p-3 rounded-xl bg-slate-900 border border-brand-cyan text-brand-cyan font-bold">
+                        <i class="fa-solid fa-wallet block text-lg mb-1"></i> HOP 1: Unhosted Wallet
+                    </button>
+                    <button onclick="inspectCryptoNode(2)" id="cryptoNode-2" class="crypto-node-btn p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-400">
+                        <i class="fa-solid fa-shuffle block text-lg mb-1"></i> HOP 2: High-Risk Mixer
+                    </button>
+                    <button onclick="inspectCryptoNode(3)" id="cryptoNode-3" class="crypto-node-btn p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-400">
+                        <i class="fa-solid fa-building-columns block text-lg mb-1"></i> HOP 3: VASP Exchange
+                    </button>
+                    <button onclick="inspectCryptoNode(4)" id="cryptoNode-4" class="crypto-node-btn p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-400">
+                        <i class="fa-solid fa-money-bill-transfer block text-lg mb-1"></i> HOP 4: Fiat Off-Ramp
+                    </button>
+                </div>
+
+                <!-- Node Inspection Panel -->
+                <div id="cryptoNodeDisplay" class="bg-slate-950 p-4 rounded-xl text-xs space-y-2 border border-slate-800">
+                    <span class="text-brand-cyan font-bold block">[HOP 1: ORIGINATING UNHOSTED WALLET] Address: 0x71C...89F</span>
+                    <p class="text-slate-300">Initial transfer of 12.5 ETH originated from a non-custodial wallet with no prior KYC verification. Onboarding fiat velocity triggered a KYT risk alert.</p>
+                </div>
             </div>
 
             <!-- TYPOLOGY ENCYCLOPEDIA -->
@@ -752,15 +809,69 @@
         </div>
     </section>
 
-    <!-- CHAPTER 6: THE GLOBAL FOOTPRINT (FIU GRID & MAP OVERLAY) -->
+    <!-- CHAPTER 6: THE GLOBAL FOOTPRINT, MICA MATRIX & 4EC CHECKLIST -->
     <section id="ch6" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-800/80">
         <div class="space-y-8">
             <div>
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full chapter-badge text-brand-cyan text-xs font-mono tracking-widest mb-3">
-                    CHAPTER 06 // REGULATORY & DIGITAL ASSET FOOTPRINT
+                    CHAPTER 06 // REGULATORY FOOTPRINT & 4EC AUDIT
                 </div>
-                <h2 class="text-3xl font-black card-heading">Full EEA & European FIU Coverage</h2>
-                <p class="card-text-muted text-sm mt-1">Direct experience drafting audit-ready SARs/STRs and performing compliance reporting across 25+ EEA jurisdictions.</p>
+                <h2 class="text-3xl font-black card-heading">EEA FIU Footprint & Quality Controls</h2>
+                <p class="card-text-muted text-sm mt-1">Direct experience drafting audit-ready SARs/STRs across 25+ EEA jurisdictions and executing 1LoD Quality Control.</p>
+            </div>
+
+            <!-- NEW FEATURE 3: MICA & CRYPTO TRAVEL RULE COMPLIANCE MATRIX -->
+            <div class="story-card p-6 rounded-2xl space-y-4 font-mono">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <span class="text-xs text-brand-amber font-bold uppercase">// MICA & CRYPTO TRAVEL RULE COMPLIANCE MATRIX</span>
+                    <span class="text-[10px] bg-brand-amber/10 text-brand-amber border border-brand-amber/30 px-2 py-0.5 rounded">VASP Regulatory Control</span>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-3 text-xs">
+                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <strong class="text-brand-cyan block">Originator & Beneficiary Checks</strong>
+                        <span class="text-[11px] card-text-muted">Verification of legal sender/recipient identifiers for crypto asset transfers meeting EU Travel Rule criteria.</span>
+                    </div>
+                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <strong class="text-brand-amber block">€1,000 Threshold Trigger</strong>
+                        <span class="text-[11px] card-text-muted">Automated execution of mandatory customer data payload transmission on transfers exceeding €1,000.</span>
+                    </div>
+                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
+                        <strong class="text-brand-emerald block">Unhosted Wallet Risk Scoring</strong>
+                        <span class="text-[11px] card-text-muted">Screening non-custodial wallet endpoints against Chainalysis/TRM sanctions and illicit mixing lists.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW FEATURE 4: 4EC / QUALITY CONTROL AUDIT CHECKLIST -->
+            <div class="story-card p-6 rounded-2xl space-y-4 font-mono">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <span class="text-xs text-brand-cyan font-bold uppercase">// 1LOD FOUR-EYE CHECKS (4EC) & QC AUDIT CHECKLIST</span>
+                    <span id="qcGauge" class="text-xs bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/30 px-2.5 py-1 rounded">AUDIT SCORE: 100% READY</span>
+                </div>
+                <p class="text-xs card-text-muted">Toggle audit checkpoints below to verify case file compliance completeness:</p>
+
+                <div class="space-y-2 text-xs">
+                    <label class="flex items-center gap-3 p-2 bg-slate-950 rounded-lg border border-slate-800 cursor-pointer">
+                        <input type="checkbox" checked onchange="updateQcScore()" class="qc-check accent-cyan-500 w-4 h-4 rounded">
+                        <span>1. Verified Primary ID & Beneficial Ownership (UBO) Disclosures against National Registries</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-2 bg-slate-950 rounded-lg border border-slate-800 cursor-pointer">
+                        <input type="checkbox" checked onchange="updateQcScore()" class="qc-check accent-cyan-500 w-4 h-4 rounded">
+                        <span>2. Evaluated Source of Wealth/Funds (SOW/SOF) Mismatches against Declared Onboarding Baseline</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-2 bg-slate-950 rounded-lg border border-slate-800 cursor-pointer">
+                        <input type="checkbox" checked onchange="updateQcScore()" class="qc-check accent-cyan-500 w-4 h-4 rounded">
+                        <span>3. Conducted OSINT & World-Check Screening to Clear False-Positive Sanctions / PEP Matches</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-2 bg-slate-950 rounded-lg border border-slate-800 cursor-pointer">
+                        <input type="checkbox" checked onchange="updateQcScore()" class="qc-check accent-cyan-500 w-4 h-4 rounded">
+                        <span>4. Mapped Cross-Border Counterparty Payment Velocity and Isolated Pass-Through Mule Flows</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-2 bg-slate-950 rounded-lg border border-slate-800 cursor-pointer">
+                        <input type="checkbox" checked onchange="updateQcScore()" class="qc-check accent-cyan-500 w-4 h-4 rounded">
+                        <span>5. Authored Defensible 5 Ws Narrative Rationale Meeting FIU Regulatory Reporting Standards</span>
+                    </label>
+                </div>
             </div>
 
             <!-- EUROPE MAP VISUAL GRAPHIC OVERLAY HERO CARD -->
@@ -773,32 +884,6 @@
                     </p>
                 </div>
                 <i class="fa-solid fa-earth-europe text-slate-800/60 text-9xl absolute -right-6 -bottom-6 pointer-events-none"></i>
-            </div>
-
-            <!-- Interactive Regulatory Framework Matrix -->
-            <div class="story-card p-6 rounded-2xl space-y-4 font-mono">
-                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                    <span class="text-xs text-brand-cyan font-bold uppercase">// EUROPEAN COMPLIANCE CONTROL MATRIX</span>
-                    <span class="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded">1LoD / 2LoD Operational Alignment</span>
-                </div>
-                <div class="grid sm:grid-cols-2 gap-3 text-xs">
-                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800">
-                        <strong class="text-brand-cyan block">GwG (German Money Laundering Act)</strong>
-                        <span class="text-[11px] card-text-muted">Strict execution of Customer Due Diligence (CDD/EDD), beneficial ownership (UBO) verification, and risk-based customer categorization.</span>
-                    </div>
-                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800">
-                        <strong class="text-brand-cyan block">KWG (German Banking Act) & MaRisk</strong>
-                        <span class="text-[11px] card-text-muted">Implementation of robust internal risk controls, transaction monitoring escalation pathways, and audit-ready log maintenance.</span>
-                    </div>
-                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800">
-                        <strong class="text-brand-amber block">MiCA & Crypto Travel Rule</strong>
-                        <span class="text-[11px] card-text-muted">Virtual asset transfer screening, originator/beneficiary information validation, and high-risk wallet identification.</span>
-                    </div>
-                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800">
-                        <strong class="text-brand-amber block">EU AML Directives (AMLD 5/6)</strong>
-                        <span class="text-[11px] card-text-muted">Cross-border suspicious activity reporting and alignment with national Financial Intelligence Units across Western & Eastern Europe.</span>
-                    </div>
-                </div>
             </div>
 
             <!-- Comprehensive FIU & European Jurisdictions Grid -->
@@ -928,59 +1013,6 @@
                     <div><h5 class="font-bold card-heading text-[11px]">ONPCS</h5><p class="text-[9px] card-text-muted">Romania (RO)</p></div>
                 </div>
             </div>
-
-            <!-- Blockchain / Crypto KYT Highlight -->
-            <div class="story-card p-6 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="space-y-2">
-                    <span class="text-brand-amber font-mono text-xs uppercase">// DIGITAL ASSET & KYT COMPETENCY</span>
-                    <h3 class="text-lg font-bold card-heading">Blockchain Analytics & Wallet Risk Screening</h3>
-                    <p class="text-xs card-text-muted leading-relaxed max-w-xl">
-                        Experienced in on-chain activity analysis, transaction pattern monitoring across digital assets, and wallet risk screening utilizing Chainalysis, TRM Labs, and Elliptic frameworks.
-                    </p>
-                </div>
-                <div class="flex flex-wrap gap-2 text-xs font-mono">
-                    <span class="px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Chainalysis</span>
-                    <span class="px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">TRM Labs</span>
-                    <span class="px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Elliptic</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CHAPTER 6: LEADERSHIP & MENTORSHIP IMPACT -->
-    <section id="ch6" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-800/80">
-        <div class="space-y-8">
-            <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full chapter-badge text-brand-cyan text-xs font-mono tracking-widest mb-3">
-                    CHAPTER 06 // LEADERSHIP & MENTORSHIP IMPACT
-                </div>
-                <h2 class="text-3xl font-black card-heading">1LoD Mentorship & Quality Impact</h2>
-                <p class="card-text-muted text-sm mt-1">Driving team-wide accuracy, accelerating ramp-up speed, and maintaining strict regulatory SLAs.</p>
-            </div>
-
-            <!-- Mentorship High-Level Impact Grid -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <div class="story-card p-5 rounded-2xl border-l-2 border-l-brand-cyan">
-                    <div class="text-xs font-mono card-text-muted">ANALYSTS MENTORED</div>
-                    <div class="text-3xl font-black text-brand-cyan mt-1">25+</div>
-                    <div class="text-[11px] card-text-muted mt-1">Direct Operational Coaching</div>
-                </div>
-                <div class="story-card p-5 rounded-2xl border-l-2 border-l-brand-blue">
-                    <div class="text-xs font-mono card-text-muted">ONBOARDING BATCHES</div>
-                    <div class="text-3xl font-black card-heading mt-1">7</div>
-                    <div class="text-[11px] card-text-muted mt-1">Buddy Trainer Program</div>
-                </div>
-                <div class="story-card p-5 rounded-2xl border-l-2 border-l-brand-emerald">
-                    <div class="text-xs font-mono card-text-muted">PROBATION PASS RATE</div>
-                    <div class="text-3xl font-black text-brand-emerald mt-1">85%</div>
-                    <div class="text-[11px] card-text-muted mt-1">High Floor Standard</div>
-                </div>
-                <div class="story-card p-5 rounded-2xl border-l-2 border-l-brand-cyan">
-                    <div class="text-xs font-mono card-text-muted">QC / 4EC ACCURACY</div>
-                    <div class="text-3xl font-black text-brand-cyan mt-1">99%+</div>
-                    <div class="text-[11px] card-text-muted mt-1">Audit-Ready Quality</div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1006,7 +1038,7 @@
                             </div>
                             <div>
                                 <span class="text-brand-cyan font-mono text-xs uppercase">// FINTECH & NEOBANKING</span>
-                                <h3 class="text-2xl font-extrabold card-heading">FinCrime Specialist</h3>
+                                <h3 class="text-2xl font-extrabold card-heading">FinCrime Specialist (1LoD SME)</h3>
                                 <p class="text-xs font-medium card-text-muted">Revolut · Full-time</p>
                             </div>
                         </div>
@@ -1222,6 +1254,57 @@
         function closeMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.add('hidden');
+        }
+
+        // Sanctions & PEP Entity Resolution Workbench Logic
+        function runSanctionSim(type) {
+            document.querySelectorAll('.sanc-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-cyan', 'text-slate-950', 'font-bold');
+                btn.classList.add('story-card', 'text-slate-300');
+            });
+            document.getElementById('sancBtn-' + type).classList.add('bg-brand-cyan', 'text-slate-950', 'font-bold');
+
+            const box = document.getElementById('sanctionDisplayBox');
+            if (type === 'pep_false') {
+                box.innerHTML = '<div class="flex items-center justify-between border-b border-slate-800 pb-2"><span class="text-brand-cyan font-bold"><i class="fa-solid fa-user-tag mr-1"></i> ENTITY FLAG: Vladimir Petrov (PEP Screening Match)</span><span class="text-[10px] bg-brand-amber/10 text-brand-amber px-2 py-0.5 rounded border border-brand-amber/30">92% Name Similarity</span></div><div class="space-y-2 text-slate-300"><p><strong class="text-white">World-Check Record:</strong> PEP Match — Regional Minister, Eastern Europe (DOB: 1978-04-12).</p><p><strong class="text-white">Primary Document & OSINT Audit:</strong> Customer passport reveals DOB: 1991-09-24, differing national ID, and verified non-PEP corporate employment in Munich, Germany.</p><p><strong class="text-white">1LoD Resolution Rationale:</strong> False Positive match confirmed based on DOB and identity dissimilarity. Case documented with registry proof and cleared for standard onboarding.</p></div>';
+            } else if (type === 'sdn_true') {
+                box.innerHTML = '<div class="flex items-center justify-between border-b border-slate-800 pb-2"><span class="text-red-400 font-bold"><i class="fa-solid fa-triangle-exclamation mr-1"></i> ENTITY FLAG: Gazprombank Subsidiary Director (EU/OFAC SDN)</span><span class="text-[10px] bg-red-500/10 text-red-400 px-2 py-0.5 rounded border border-red-500/30">99% True Identity Match</span></div><div class="space-y-2 text-slate-300"><p><strong class="text-white">Sanctions List Match:</strong> EU Sanctions List / OFAC SDN List (Ownership & Board Linkage confirmed).</p><p><strong class="text-white">Corporate Registry OSINT:</strong> OpenCorporates & Commercial Register filings confirm 40% voting rights held by sanctioned parent entity.</p><p><strong class="text-white">1LoD Enforcement Rationale:</strong> True Sanctions Match verified. Account frozen instantly, cross-border payment blocked, and high-priority escalation logged for MLRO & FIU notification.</p></div>';
+            }
+        }
+
+        // Crypto Flow Tracer Node Inspection Logic
+        function inspectCryptoNode(step) {
+            document.querySelectorAll('.crypto-node-btn').forEach(btn => {
+                btn.classList.remove('bg-slate-900', 'border-brand-cyan', 'text-brand-cyan');
+                btn.classList.add('bg-slate-950', 'border-slate-800', 'text-slate-400');
+            });
+            document.getElementById('cryptoNode-' + step).classList.add('bg-slate-900', 'border-brand-cyan', 'text-brand-cyan');
+
+            const box = document.getElementById('cryptoNodeDisplay');
+            if (step === 1) {
+                box.innerHTML = '<span class="text-brand-cyan font-bold block">[HOP 1: ORIGINATING UNHOSTED WALLET] Address: 0x71C...89F</span><p class="text-slate-300">Initial transfer of 12.5 ETH originated from a non-custodial wallet with no prior KYC verification. Onboarding fiat velocity triggered a KYT risk alert.</p>';
+            } else if (step === 2) {
+                box.innerHTML = '<span class="text-brand-amber font-bold block">[HOP 2: HIGH-RISK MIXER] Tornado / Mixer Protocol</span><p class="text-slate-300">Funds passed through an obfuscating mixing protocol. Chainalysis KYT exposure score spiked to 9.8 (High Risk / Illicit Layering).</p>';
+            } else if (step === 3) {
+                box.innerHTML = '<span class="text-brand-blue font-bold block">[HOP 3: VASP EXCHANGE DEPOSIT] Revolut Internal Ledger</span><p class="text-slate-300">Mixed digital assets deposited into internal customer exchange account. System flagged Travel Rule compliance violation due to missing originator payload.</p>';
+            } else if (step === 4) {
+                box.innerHTML = '<span class="text-brand-emerald font-bold block">[HOP 4: FIAT OFF-RAMP & ENFORCEMENT] SEPA Outbound Transfer Block</span><p class="text-slate-300">Rapid attempt to convert ETH to SEPA Euro transfer intercepted. Account frozen, funds secured, and STR filed to FIU Germany (BaFin).</p>';
+            }
+        }
+
+        // 4EC Quality Control Checklist Live Score Counter
+        function updateQcScore() {
+            const checkboxes = document.querySelectorAll('.qc-check');
+            let checkedCount = 0;
+            checkboxes.forEach(cb => { if (cb.checked) checkedCount++; });
+            const scorePercent = (checkedCount / checkboxes.length) * 100;
+            const gauge = document.getElementById('qcGauge');
+            gauge.textContent = 'AUDIT SCORE: ' + scorePercent.toFixed(0) + '% READY';
+            if (scorePercent === 100) {
+                gauge.className = 'text-xs bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/30 px-2.5 py-1 rounded';
+            } else {
+                gauge.className = 'text-xs bg-brand-amber/10 text-brand-amber border border-brand-amber/30 px-2.5 py-1 rounded';
+            }
         }
 
         // Skills Matrix Category Filter
