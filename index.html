@@ -120,7 +120,7 @@
                 <a href="#career" class="hover:text-brand-cyan transition-colors">07. CAREER</a>
             </div>
 
-            <!-- Action Controls (Audit Mode, Email Copy & Direct Mail) -->
+            <!-- Action Controls -->
             <div class="flex items-center gap-2">
                 <button onclick="toggleTheme()" id="themeToggleBtn" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-brand-cyan border border-slate-700 transition flex items-center gap-1.5 font-mono">
                     <i class="fa-solid fa-circle-half-stroke"></i> <span id="themeBtnText" class="hidden sm:inline">AUDIT MODE</span>
@@ -393,7 +393,7 @@
 
                 <div class="flex flex-wrap gap-2 text-xs border-b border-slate-800 pb-3">
                     <button onclick="runTreePath('corp')" id="treeBtn-corp" class="tree-btn active px-3 py-1.5 rounded bg-brand-cyan text-slate-950 font-bold">01. HIGH-NET-WORTH CDD & SOF</button>
-                    <button onclick="runTreePath('crypto')" id="treeBtn-crypto" class="tree-btn px-3 py-1.5 rounded story-card text-slate-300">02. CRYPTO / KYT VELOCITY SPIKE</button>
+                    <button onclick="runTreePath('fiat_vel')" id="treeBtn-fiat_vel" class="tree-btn px-3 py-1.5 rounded story-card text-slate-300">02. HIGH VELOCITY PASS-THROUGH FLOWS</button>
                     <button onclick="runTreePath('ato')" id="treeBtn-ato" class="tree-btn px-3 py-1.5 rounded story-card text-slate-300">03. USER ATO & DISBURSEMENT ALTERATION</button>
                 </div>
 
@@ -433,46 +433,15 @@
         </div>
     </section>
 
-    <!-- CHAPTER 3: INTERACTIVE TYPOLOGY ENCYCLOPEDIA & BLOCKCHAIN TRACER (ID: TYPOLOGIES) -->
+    <!-- CHAPTER 3: INTERACTIVE TYPOLOGY ENCYCLOPEDIA (ID: TYPOLOGIES) -->
     <section id="typologies" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-800/80">
         <div class="space-y-8">
             <div>
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full chapter-badge text-brand-cyan text-xs font-mono tracking-widest mb-3">
-                    CHAPTER 03 // TYPOLOGY & BLOCKCHAIN TRACER
+                    CHAPTER 03 // FINCRIME TYPOLOGY SUITE
                 </div>
-                <h2 class="text-3xl font-black card-heading">FinCrime Typologies & On-Chain Flow Tracer</h2>
-                <p class="card-text-muted text-sm mt-1">Explore core financial crime typologies and test the interactive blockchain transaction flow tracer below.</p>
-            </div>
-
-            <!-- CRYPTOCURRENCY TRANSACTION FLOW TRACER -->
-            <div class="story-card p-6 rounded-2xl space-y-4 font-mono">
-                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                    <span class="text-xs text-brand-emerald font-bold uppercase">// ON-CHAIN CRYPTOCURRENCY FLOW TRACER (CHAINALYSIS / TRM MOCKUP)</span>
-                    <span class="text-[10px] bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/30 px-2 py-0.5 rounded">3-Hop Risk Forensics</span>
-                </div>
-                <p class="text-xs card-text-muted">Click any node on the transaction graph to view on-chain forensics and compliance disposition:</p>
-
-                <!-- Flow Visualizer Nodes -->
-                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 text-center text-xs">
-                    <button onclick="inspectCryptoNode(1)" id="cryptoNode-1" class="crypto-node-btn p-3 rounded-xl bg-slate-900 border border-brand-cyan text-brand-cyan font-bold">
-                        <i class="fa-solid fa-wallet block text-lg mb-1"></i> HOP 1: Unhosted Wallet
-                    </button>
-                    <button onclick="inspectCryptoNode(2)" id="cryptoNode-2" class="crypto-node-btn p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-400">
-                        <i class="fa-solid fa-shuffle block text-lg mb-1"></i> HOP 2: High-Risk Mixer
-                    </button>
-                    <button onclick="inspectCryptoNode(3)" id="cryptoNode-3" class="crypto-node-btn p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-400">
-                        <i class="fa-solid fa-building-columns block text-lg mb-1"></i> HOP 3: VASP Exchange
-                    </button>
-                    <button onclick="inspectCryptoNode(4)" id="cryptoNode-4" class="crypto-node-btn p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-400">
-                        <i class="fa-solid fa-money-bill-transfer block text-lg mb-1"></i> HOP 4: Fiat Off-Ramp
-                    </button>
-                </div>
-
-                <!-- Node Inspection Panel -->
-                <div id="cryptoNodeDisplay" class="bg-slate-950 p-4 rounded-xl text-xs space-y-2 border border-slate-800">
-                    <span class="text-brand-cyan font-bold block">[HOP 1: ORIGINATING UNHOSTED WALLET] Address: 0x71C...89F</span>
-                    <p class="text-slate-300">Initial transfer of 12.5 ETH originated from a non-custodial wallet with no prior KYC verification. Onboarding fiat velocity triggered a KYT risk alert.</p>
-                </div>
+                <h2 class="text-3xl font-black card-heading">Interactive FinCrime & Fraud Typology Suite</h2>
+                <p class="card-text-muted text-sm mt-1">Explore core financial crime typologies I independently investigate and dismantle across retail neobanking and payment ecosystems.</p>
             </div>
 
             <!-- TYPOLOGY ENCYCLOPEDIA -->
@@ -481,7 +450,6 @@
                     <button onclick="filterTypology('all')" class="typo-tab active px-3 py-1.5 rounded bg-brand-cyan text-slate-950 font-bold">ALL TYPOLOGIES</button>
                     <button onclick="filterTypology('aml')" class="typo-tab px-3 py-1.5 rounded story-card text-slate-300">AML & NARCOTICS RACKETS</button>
                     <button onclick="filterTypology('fraud')" class="typo-tab px-3 py-1.5 rounded story-card text-slate-300">ATO & APP SCAMS</button>
-                    <button onclick="filterTypology('crypto')" class="typo-tab px-3 py-1.5 rounded story-card text-slate-300">CRYPTO & ON-CHAIN RISK</button>
                 </div>
 
                 <div class="grid sm:grid-cols-2 gap-4">
@@ -521,15 +489,15 @@
                         </p>
                     </div>
 
-                    <div class="typo-card crypto story-card p-5 rounded-2xl space-y-2">
+                    <div class="typo-card aml story-card p-5 rounded-2xl space-y-2">
                         <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                            <h4 class="font-bold card-heading text-sm text-brand-emerald flex items-center gap-2">
-                                <i class="fa-brands fa-bitcoin"></i> High-Risk Mixer & Wallet KYT Risk
+                            <h4 class="font-bold card-heading text-sm text-brand-cyan flex items-center gap-2">
+                                <i class="fa-solid fa-building-columns"></i> Cross-Border Smurfing & Layering
                             </h4>
-                            <span class="text-[10px] font-mono bg-brand-emerald/10 text-brand-emerald px-2 py-0.5 rounded">Chainalysis / TRM</span>
+                            <span class="text-[10px] font-mono bg-brand-cyan/10 text-brand-cyan px-2 py-0.5 rounded">High-Risk EU Flows</span>
                         </div>
                         <p class="text-xs card-text-muted leading-relaxed">
-                            On-chain activity analysis identifying digital asset transfers passing through mixing services, unhosted wallets, or darknet market counterparties violating Travel Rule guidelines.
+                            Structuring rapid micro-transactions across multiple EEA jurisdictions to bypass single-institution TM thresholds and obfuscate original source of funds.
                         </p>
                     </div>
                 </div>
@@ -552,7 +520,6 @@
             <div class="flex flex-wrap gap-2 font-mono text-xs border-b border-slate-800 pb-3">
                 <button onclick="filterSkillsMatrix('all')" class="skill-matrix-btn active px-3 py-1.5 rounded bg-brand-cyan text-slate-950 font-bold">ALL COMPETENCIES</button>
                 <button onclick="filterSkillsMatrix('aml')" class="skill-matrix-btn px-3 py-1.5 rounded story-card text-slate-300">AML & REGULATORY</button>
-                <button onclick="filterSkillsMatrix('kyt')" class="skill-matrix-btn px-3 py-1.5 rounded story-card text-slate-300">CRYPTO & KYT</button>
                 <button onclick="filterSkillsMatrix('fraud')" class="skill-matrix-btn px-3 py-1.5 rounded story-card text-slate-300">FRAUD & ATO</button>
                 <button onclick="filterSkillsMatrix('tech')" class="skill-matrix-btn px-3 py-1.5 rounded story-card text-slate-300">SQL & AUTOMATION</button>
                 <button onclick="filterSkillsMatrix('lead')" class="skill-matrix-btn px-3 py-1.5 rounded story-card text-slate-300">LEADERSHIP & QC</button>
@@ -576,23 +543,7 @@
                     </ul>
                 </div>
 
-                <!-- Card 2: Crypto & KYT -->
-                <div class="skill-matrix-card kyt story-card p-5 rounded-2xl space-y-3">
-                    <div class="flex items-center gap-3 border-b border-slate-800 pb-2">
-                        <i class="fa-brands fa-bitcoin text-brand-amber text-xl"></i>
-                        <h4 class="font-bold card-heading text-sm">Crypto & Blockchain KYT</h4>
-                    </div>
-                    <ul class="space-y-1.5 text-xs card-text-muted leading-relaxed">
-                        <li>• Chainalysis, TRM Labs & Elliptic Analytics</li>
-                        <li>• KYT Alert Triage & Wallet Risk Screening</li>
-                        <li>• On-Chain Velocity & Transaction Pattern Tracing</li>
-                        <li>• Crypto Travel Rule & MiCA Guidelines</li>
-                        <li>• Unhosted Wallet & Darknet Counterparty Review</li>
-                        <li>• Crypto SOF/SOW Verification & Mule Tracking</li>
-                    </ul>
-                </div>
-
-                <!-- Card 3: Fraud -->
+                <!-- Card 2: Fraud -->
                 <div class="skill-matrix-card fraud story-card p-5 rounded-2xl space-y-3">
                     <div class="flex items-center gap-3 border-b border-slate-800 pb-2">
                         <i class="fa-solid fa-user-shield text-brand-emerald text-xl"></i>
@@ -608,7 +559,7 @@
                     </ul>
                 </div>
 
-                <!-- Card 4: SQL & Tech -->
+                <!-- Card 3: SQL & Tech -->
                 <div class="skill-matrix-card tech story-card p-5 rounded-2xl space-y-3">
                     <div class="flex items-center gap-3 border-b border-slate-800 pb-2">
                         <i class="fa-solid fa-database text-brand-blue text-xl"></i>
@@ -624,7 +575,7 @@
                     </ul>
                 </div>
 
-                <!-- Card 5: Automation -->
+                <!-- Card 4: Automation -->
                 <div class="skill-matrix-card tech story-card p-5 rounded-2xl space-y-3">
                     <div class="flex items-center gap-3 border-b border-slate-800 pb-2">
                         <i class="fa-solid fa-gears text-brand-cyan text-xl"></i>
@@ -640,8 +591,8 @@
                     </ul>
                 </div>
 
-                <!-- Card 6: Leadership -->
-                <div class="skill-matrix-card lead story-card p-5 rounded-2xl space-y-3">
+                <!-- Card 5: Leadership -->
+                <div class="skill-matrix-card lead story-card p-5 rounded-2xl space-y-3 sm:col-span-2 lg:col-span-1">
                     <div class="flex items-center gap-3 border-b border-slate-800 pb-2">
                         <i class="fa-solid fa-users text-brand-emerald text-xl"></i>
                         <h4 class="font-bold card-heading text-sm">1LoD Leadership & Quality Control</h4>
@@ -661,9 +612,6 @@
             <div class="story-card p-6 rounded-2xl space-y-3">
                 <span class="text-xs font-mono text-brand-cyan uppercase tracking-widest">// SOFTWARE, SYSTEMS & COMPLIANCE STACK</span>
                 <div class="flex flex-wrap gap-2 text-xs font-mono">
-                    <span class="px-3 py-1.5 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 hover:border-brand-cyan transition">Chainalysis</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 hover:border-brand-cyan transition">TRM Labs</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 hover:border-brand-cyan transition">Elliptic</span>
                     <span class="px-3 py-1.5 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 hover:border-brand-cyan transition">LexisNexis</span>
                     <span class="px-3 py-1.5 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 hover:border-brand-cyan transition">Dow Jones World-Check</span>
                     <span class="px-3 py-1.5 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 hover:border-brand-cyan transition">Oracle FCCM</span>
@@ -809,7 +757,7 @@
         </div>
     </section>
 
-    <!-- CHAPTER 6: THE GLOBAL FOOTPRINT, MICA MATRIX & 4EC CHECKLIST (ID: FOOTPRINT) -->
+    <!-- CHAPTER 6: THE GLOBAL FOOTPRINT & 4EC CHECKLIST (ID: FOOTPRINT) -->
     <section id="footprint" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-800/80">
         <div class="space-y-8">
             <div>
@@ -818,28 +766,6 @@
                 </div>
                 <h2 class="text-3xl font-black card-heading">EEA FIU Footprint & Quality Controls</h2>
                 <p class="card-text-muted text-sm mt-1">Direct experience drafting audit-ready SARs/STRs across 25+ EEA jurisdictions and executing 1LoD Quality Control.</p>
-            </div>
-
-            <!-- MICA & CRYPTO TRAVEL RULE COMPLIANCE MATRIX -->
-            <div class="story-card p-6 rounded-2xl space-y-4 font-mono">
-                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                    <span class="text-xs text-brand-amber font-bold uppercase">// MICA & CRYPTO TRAVEL RULE COMPLIANCE MATRIX</span>
-                    <span class="text-[10px] bg-brand-amber/10 text-brand-amber border border-brand-amber/30 px-2 py-0.5 rounded">VASP Regulatory Control</span>
-                </div>
-                <div class="grid sm:grid-cols-3 gap-3 text-xs">
-                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-                        <strong class="text-brand-cyan block">Originator & Beneficiary Checks</strong>
-                        <span class="text-[11px] card-text-muted">Verification of legal sender/recipient identifiers for crypto asset transfers meeting EU Travel Rule criteria.</span>
-                    </div>
-                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-                        <strong class="text-brand-amber block">€1,000 Threshold Trigger</strong>
-                        <span class="text-[11px] card-text-muted">Automated execution of mandatory customer data payload transmission on transfers exceeding €1,000.</span>
-                    </div>
-                    <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-                        <strong class="text-brand-emerald block">Unhosted Wallet Risk Scoring</strong>
-                        <span class="text-[11px] card-text-muted">Screening non-custodial wallet endpoints against Chainalysis/TRM sanctions and illicit mixing lists.</span>
-                    </div>
-                </div>
             </div>
 
             <!-- 4EC / QUALITY CONTROL AUDIT CHECKLIST -->
@@ -1013,22 +939,6 @@
                     <div><h5 class="font-bold card-heading text-[11px]">ONPCS</h5><p class="text-[9px] card-text-muted">Romania (RO)</p></div>
                 </div>
             </div>
-
-            <!-- Blockchain / Crypto KYT Highlight -->
-            <div class="story-card p-6 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="space-y-2">
-                    <span class="text-brand-amber font-mono text-xs uppercase">// DIGITAL ASSET & KYT COMPETENCY</span>
-                    <h3 class="text-lg font-bold card-heading">Blockchain Analytics & Wallet Risk Screening</h3>
-                    <p class="text-xs card-text-muted leading-relaxed max-w-xl">
-                        Experienced in on-chain activity analysis, transaction pattern monitoring across digital assets, and wallet risk screening utilizing Chainalysis, TRM Labs, and Elliptic frameworks.
-                    </p>
-                </div>
-                <div class="flex flex-wrap gap-2 text-xs font-mono">
-                    <span class="px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Chainalysis</span>
-                    <span class="px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">TRM Labs</span>
-                    <span class="px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">Elliptic</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1094,14 +1004,6 @@
                             <div>
                                 <strong class="card-heading block font-semibold text-sm">GwG / KWG / MaRisk Compliance & Regulatory Reporting:</strong>
                                 Executed and refined GwG, KWG, and EU-compliant AML control mechanisms. Authored, reviewed, and filed audit-ready Suspicious Activity Reports (SARs/STRs) directly to 25+ top-tier European & EEA FIUs (TRACFIN, BaFin/FIU Germany, FNTT, SEPBLAC, MROS, FIU NL, CTIF-CFI, GNECB, CRF, UIF, GIIF, FID, FAU, etc.).
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-3">
-                            <i class="fa-brands fa-bitcoin text-brand-cyan mt-1 shrink-0"></i>
-                            <div>
-                                <strong class="card-heading block font-semibold text-sm">Blockchain Analytics & Crypto KYT Screening:</strong>
-                                Conducted blockchain analytics, on-chain activity analysis, and wallet screening (KYT) utilizing Chainalysis, TRM Labs, and Elliptic frameworks to identify digital-asset-related risk indicators, unmask mule wallets, and evaluate source of wealth/funds (SOF/SOW).
                             </div>
                         </div>
 
@@ -1288,26 +1190,6 @@
             }
         }
 
-        // Crypto Flow Tracer Node Inspection Logic
-        function inspectCryptoNode(step) {
-            document.querySelectorAll('.crypto-node-btn').forEach(btn => {
-                btn.classList.remove('bg-slate-900', 'border-brand-cyan', 'text-brand-cyan');
-                btn.classList.add('bg-slate-950', 'border-slate-800', 'text-slate-400');
-            });
-            document.getElementById('cryptoNode-' + step).classList.add('bg-slate-900', 'border-brand-cyan', 'text-brand-cyan');
-
-            const box = document.getElementById('cryptoNodeDisplay');
-            if (step === 1) {
-                box.innerHTML = '<span class="text-brand-cyan font-bold block">[HOP 1: ORIGINATING UNHOSTED WALLET] Address: 0x71C...89F</span><p class="text-slate-300">Initial transfer of 12.5 ETH originated from a non-custodial wallet with no prior KYC verification. Onboarding fiat velocity triggered a KYT risk alert.</p>';
-            } else if (step === 2) {
-                box.innerHTML = '<span class="text-brand-amber font-bold block">[HOP 2: HIGH-RISK MIXER] Tornado / Mixer Protocol</span><p class="text-slate-300">Funds passed through an obfuscating mixing protocol. Chainalysis KYT exposure score spiked to 9.8 (High Risk / Illicit Layering).</p>';
-            } else if (step === 3) {
-                box.innerHTML = '<span class="text-brand-blue font-bold block">[HOP 3: VASP EXCHANGE DEPOSIT] Revolut Internal Ledger</span><p class="text-slate-300">Mixed digital assets deposited into internal customer exchange account. System flagged Travel Rule compliance violation due to missing originator payload.</p>';
-            } else if (step === 4) {
-                box.innerHTML = '<span class="text-brand-emerald font-bold block">[HOP 4: FIAT OFF-RAMP & ENFORCEMENT] SEPA Outbound Transfer Block</span><p class="text-slate-300">Rapid attempt to convert ETH to SEPA Euro transfer intercepted. Account frozen, funds secured, and STR filed to FIU Germany (BaFin).</p>';
-            }
-        }
-
         // 4EC Quality Control Checklist Live Score Counter
         function updateQcScore() {
             const checkboxes = document.querySelectorAll('.qc-check');
@@ -1351,8 +1233,8 @@
             const box = document.getElementById('treeDisplayBox');
             if (path === 'corp') {
                 box.innerHTML = '<div class="flex items-center gap-2 text-brand-cyan font-bold"><i class="fa-solid fa-sitemap"></i> EVALUATION PATHWAY: Personal Onboarding & Source of Funds</div><div class="space-y-2 text-slate-300"><p><strong class="text-white">Trigger:</strong> High-value initial fiat transfer originating from a high-risk jurisdiction without declared wealth evidence.</p><p><strong class="text-white">OSINT & Validation Protocol:</strong> Queried public records, primary document proofs, and LexisNexis World-Check for adverse media and PEP matches.</p><p><strong class="text-white">1LoD Decisioning Outcome:</strong> Verified source of wealth/funds (SOF/SOW), cleared false-positive sanctions alerts, and finalized defensible EDD approval without unnecessary outreach.</p></div>';
-            } else if (path === 'crypto') {
-                box.innerHTML = '<div class="flex items-center gap-2 text-brand-cyan font-bold"><i class="fa-brands fa-bitcoin"></i> EVALUATION PATHWAY: Crypto KYT Velocity & Wallet Risk</div><div class="space-y-2 text-slate-300"><p><strong class="text-white">Trigger:</strong> Sudden $50K crypto transfer routed through an unhosted wallet following a rapid fiat onboarding velocity spike.</p><p><strong class="text-white">On-Chain Analytics Protocol:</strong> Ran Chainalysis / TRM Labs wallet screening to trace transaction hops, evaluate darknet counterparty exposure, and check Travel Rule compliance.</p><p><strong class="text-white">1LoD Decisioning Outcome:</strong> Identified high-risk mixing service exposure, frozen wallet funds, and drafted audit-ready SAR for national FIU submission.</p></div>';
+            } else if (path === 'fiat_vel') {
+                box.innerHTML = '<div class="flex items-center gap-2 text-brand-cyan font-bold"><i class="fa-solid fa-bolt"></i> EVALUATION PATHWAY: High Velocity Pass-Through Flows</div><div class="space-y-2 text-slate-300"><p><strong class="text-white">Trigger:</strong> Multiple rapid inbound transfers immediately followed by structured outbound SEPA payments.</p><p><strong class="text-white">Transaction Analytics Protocol:</strong> Ran SQL queries to map counterparty networks, trace rapid pass-through velocity, and check for money mule indicators.</p><p><strong class="text-white">1LoD Decisioning Outcome:</strong> Isolated high-risk account, blocked pending disbursements, and drafted audit-ready SAR for national FIU submission.</p></div>';
             } else if (path === 'ato') {
                 box.innerHTML = '<div class="flex items-center gap-2 text-brand-cyan font-bold"><i class="fa-solid fa-user-ninja"></i> EVALUATION PATHWAY: User Account Takeover (ATO)</div><div class="space-y-2 text-slate-300"><p><strong class="text-white">Trigger:</strong> Unrecognized IP velocity change combined with instant bank routing alteration on high-volume user account.</p><p><strong class="text-white">Forensic Investigation Protocol:</strong> Queried database logs using SQL to analyze session device fingerprints, password change events, and payout alteration history.</p><p><strong class="text-white">1LoD Decisioning Outcome:</strong> Account isolated immediately, bad actor disbursement blocked, and $149,560 in platform loss prevented.</p></div>';
             }
@@ -1453,7 +1335,7 @@
             if (tab === 'who') {
                 box.innerHTML = '<strong class="text-brand-cyan block mb-1">[WHO]: Counterparty Identification & Individual Profiling</strong>Full individual identity verification, KYC/CDD onboarding baseline, and PEP/Sanctions screening matches via Dow Jones / LexisNexis.';
             } else if (tab === 'what') {
-                box.innerHTML = '<strong class="text-brand-cyan block mb-1">[WHAT]: Suspicious Transaction Pattern Isolation</strong>Unusual payment velocity spikes, source of funds mismatches, multi-account muling indicators, and high-volume crypto wallet transfers.';
+                box.innerHTML = '<strong class="text-brand-cyan block mb-1">[WHAT]: Suspicious Transaction Pattern Isolation</strong>Unusual payment velocity spikes, source of funds mismatches, and multi-account muling indicators.';
             } else if (tab === 'when') {
                 box.innerHTML = '<strong class="text-brand-cyan block mb-1">[WHEN & WHERE]: Chronological Timeline & Multi-Jurisdiction Flows</strong>Exact transactional chronology and geographical flow analysis across 25+ European & EEA FIU jurisdictions.';
             } else if (tab === 'why') {
