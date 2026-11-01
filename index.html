@@ -194,7 +194,7 @@ section { padding-block: 88px 8px; }
 @media (max-width: 760px) { .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); } .fig { padding: 20px 16px; } }
 
 /* Cases */
-.cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .case { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 24px; display: grid; gap: 18px; align-content: start; position: relative; overflow: hidden; min-width: 0; transition: border-color .2s, transform .2s; }
 .case:hover { border-color: color-mix(in srgb, var(--signal) 60%, var(--rule)); transform: translateY(-2px); }
 .case .meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
@@ -436,7 +436,7 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
         </figure>
     <div class="readout" aria-hidden="true">
       <div class="row"><span>TRACE</span><span id="roHops">6 hops</span></div>
-      <div class="row"><span>PATTERN</span><span>Pass-through</span></div>
+      <div class="row"><span>PATTERN</span><span id="roPat">Layering</span></div>
       <div class="row"><span>JURISDICTIONS</span><span id="roJur">LT · DE · NL</span></div>
       <div class="row"><span>RISK</span><span class="flag">HIGH · Escalate</span></div>
       <div class="cap">Illustrative animation, not real data</div>
@@ -474,18 +474,33 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
         <article class="case">
           <div class="meta"><span class="label">Revolut · AML</span><span class="stamp">Escalated</span></div>
           <span class="big">5+ networks</span>
-          <h3>Organised-crime money mule networks</h3>
-          <div class="flow" aria-label="Funds flow: source, mule, mule, mule, cash-out">
-            <div class="node"><i></i><span>Source</span></div><div class="edge"></div>
-            <div class="node"><i></i><span>Mule</span></div><div class="edge"></div>
-            <div class="node flag"><i></i><span>Mule</span></div><div class="edge"></div>
-            <div class="node"><i></i><span>Mule</span></div><div class="edge"></div>
-            <div class="node flag"><i></i><span>Cash-out</span></div>
+          <h3>Organised-crime money laundering networks</h3>
+          <div class="flow" aria-label="Funds flow: placement, layering through mule accounts, integration">
+            <div class="node"><i></i><span>Placement</span></div><div class="edge"></div>
+            <div class="node flag"><i></i><span>Layer</span></div><div class="edge"></div>
+            <div class="node"><i></i><span>Layer</span></div><div class="edge"></div>
+            <div class="node flag"><i></i><span>Integration</span></div>
           </div>
           <dl>
-            <div><dt>Problem</dt><dd>Pass-through activity across mule accounts in several EU countries, hiding where the money came from.</dd></div>
+            <div><dt>Problem</dt><dd>Criminal proceeds layered through mule accounts in several EU countries, hiding where the money came from.</dd></div>
             <div><dt>Approach</dt><dd>Mapped transaction flows and counterparties, profiled linked accounts and checked open sources.</dd></div>
             <div><dt>Outcome</dt><dd>Escalated 5+ networks and drafted the SARs/STRs for the relevant FIUs.</dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <div class="meta"><span class="label">Revolut · Fraud</span><span class="stamp">Disputed</span></div>
+          <span class="big">CNP · CP · SDD</span>
+          <h3>Card fraud and chargebacks</h3>
+          <div class="flow" aria-label="Card fraud flow: card details stolen, test transactions, cash-out purchase, chargeback">
+            <div class="node"><i></i><span>Stolen</span></div><div class="edge"></div>
+            <div class="node flag"><i></i><span>Test</span></div><div class="edge"></div>
+            <div class="node flag"><i></i><span>Cash-out</span></div><div class="edge"></div>
+            <div class="node"><i></i><span>Dispute</span></div>
+          </div>
+          <dl>
+            <div><dt>Problem</dt><dd>Card-not-present and card-present fraud, plus unauthorised SEPA Direct Debit collections, hitting customer accounts.</dd></div>
+            <div><dt>Approach</dt><dd>Traced each transaction through the card payment flow to tell real fraud from merchant disputes and first-party claims.</dd></div>
+            <div><dt>Outcome</dt><dd>Chargebacks raised within card scheme rules, with fraud patterns shared back to fraud strategy and engineering teams.</dd></div>
           </dl>
         </article>
         <article class="case">
@@ -549,35 +564,37 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
           <div class="group">
             <h4>Investigations and AML</h4>
             <ul>
-              <li>Investigate <strong>300+ fraud and transaction monitoring alerts every month</strong>, meeting quality and SLA targets.</li>
+              <li>Investigate <strong>300+ fraud and AML transaction monitoring alerts every month</strong>, meeting quality and SLA targets.</li>
               <li>Identified and escalated <strong>5+ cross-border money mule and laundering networks</strong> linked to organised crime, using transaction flow and counterparty analysis.</li>
               <li>Draft SARs/STRs for <strong>31 financial intelligence units across the EEA and Switzerland</strong>, each built on a clear who, what, when, where and why.</li>
-              <li>Apply <strong>EU AML Directive and German GwG, KWG and MaRisk</strong> requirements in investigations and regulatory reporting.</li>
-              <li>Respond to law-enforcement and regulator information requests with complete, accurate account and transaction records.</li>
+              <li>Apply <strong>EU AML Directive and German GwG, KWG and MaRisk</strong> requirements in investigations, so reports meet regulatory expectations in each market.</li>
+              <li>Respond to <strong>law-enforcement and regulator information requests</strong> with complete, accurate account and transaction records that investigators can act on.</li>
             </ul>
           </div>
           <div class="group">
             <h4>Due diligence</h4>
             <ul>
               <li>Piloted an EDD validation framework across <strong>630+ high-risk cases</strong>, using OSINT and document checks to cut <strong>40%+ of unnecessary customer outreach requests</strong>.</li>
-              <li>Verify <strong>source of funds and source of wealth</strong> for high-risk individual customers, testing declarations against documents and account activity.</li>
-              <li>Carry out periodic KYC reviews and resolve PEP, sanctions and adverse media screening matches.</li>
+              <li>Verify <strong>source of funds and source of wealth</strong> for high-risk customers, testing declarations against documents and account activity so relationships are kept only where the money story holds up.</li>
+              <li>Carry out <strong>periodic KYC reviews</strong> and resolve <strong>PEP, sanctions and adverse media</strong> matches, keeping risk profiles current and clearing false matches quickly so genuine customers aren't blocked.</li>
             </ul>
           </div>
           <div class="group">
             <h4>Fraud and payments</h4>
             <ul>
-              <li>Investigate <strong>card-not-present and card-present fraud</strong> across the full card payment flow.</li>
-              <li>Handle <strong>chargebacks in line with card scheme rules</strong>, working with fraud strategy and engineering teams.</li>
-              <li>Investigate <strong>SEPA Direct Debit fraud</strong> and the accounts used to collect it.</li>
+              <li>Investigate <strong>card-not-present and card-present fraud</strong> by tracing each disputed transaction through the card payment flow, so genuine victims are refunded and fraud losses are routed to the right party.</li>
+              <li>Raise <strong>chargebacks within card scheme rules</strong>, matching each case to the right reason code and deadline, recovering losses from the merchant side instead of absorbing them.</li>
+              <li>Share recurring card fraud patterns with <strong>fraud strategy and engineering teams</strong>, feeding real case evidence into tighter detection controls.</li>
+              <li>Investigate <strong>unauthorised SEPA Direct Debit collections</strong>, tracing them back to the creditor accounts behind them so they can be stopped before more customers are hit.</li>
             </ul>
           </div>
           <div class="group">
             <h4>Quality and training</h4>
             <ul>
-              <li>Built a <strong>case note generator</strong> that standardised investigation write-ups across the team and cut manual data entry.</li>
-              <li>Perform four-eye checks and QC reviews as a subject matter expert, at <strong>99%+ accuracy</strong>.</li>
-              <li>Buddy Trainer for <strong>7 batches of new investigators</strong>, with an <strong>85% probation pass rate</strong>.</li>
+              <li>Built a <strong>case note generator</strong> that standardised investigation write-ups across the team, cutting manual data entry and making cases faster to review.</li>
+              <li>Perform <strong>four-eye checks and QC reviews</strong> as a subject matter expert at <strong>99%+ accuracy</strong>, catching errors before cases close and reports are filed.</li>
+              <li>Authored <strong>SOPs for investigation workflows</strong>, giving new and existing investigators one clear standard and improving team accuracy.</li>
+              <li>Buddy Trainer for <strong>7 batches of new fraud and AML investigators</strong>, coaching AML workflows, SAR standards and fraud typologies, with an <strong>85% probation pass rate</strong> and faster onboarding.</li>
             </ul>
           </div>
         </div>
@@ -594,9 +611,9 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
           <div class="group">
             <h4>Fraud investigations</h4>
             <ul>
-              <li>Investigated fraudulent customer activity by analysing <strong>order patterns, account behaviour and fraud indicators</strong>.</li>
+              <li>Investigated fraudulent customer activity by analysing <strong>order patterns, account behaviour and fraud indicators</strong>, stopping bad actors before further losses.</li>
               <li>Detected account takeover and bad-actor collusion networks, leading to the <strong>recovery of $149,560</strong>.</li>
-              <li>Resolved fraud-driven negative balances by holding further payments and recovering the amounts owed.</li>
+              <li>Resolved <strong>fraud-driven negative balances</strong> by holding further payments, recovering the amounts owed and stopping further losses.</li>
               <li>Kept <strong>98% decision accuracy</strong> on high-risk account investigations within SLA.</li>
               <li>Flagged emerging fraud trends, including collusion, card-not-present abuse and ad abuse, for enforcement on accounts with <strong>$10K–$50K</strong> in transaction volume.</li>
             </ul>
@@ -604,17 +621,15 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
           <div class="group">
             <h4>Data and tooling</h4>
             <ul>
-              <li>Ran <strong>SQL trend analysis and root cause investigations</strong> to find velocity spikes, rule failure points and false positive and negative rates.</li>
-              <li>Shared data-backed rule recommendations with engineering leads.</li>
-              <li>Built a case validation tool that cut per-task time from <strong>90 seconds to 6 seconds</strong>, lowering team handle time by <strong>12.7%</strong>.</li>
-              <li>The same tool freed <strong>10.4% of daily team capacity</strong> for investigation work.</li>
+              <li>Ran <strong>SQL trend analysis and root cause investigations</strong> on velocity spikes and false positive and negative rates, pinpointing why rules missed fraud or flagged genuine customers.</li>
+              <li>Shared <strong>data-backed rule recommendations</strong> with engineering leads to reduce false positives and close detection gaps.</li>
+              <li>Built a case validation tool that cut per-task time from <strong>90 seconds to 6 seconds</strong>, lowering team handle time by <strong>12.7%</strong> and freeing <strong>10.4% of daily team capacity</strong> for investigation work.</li>
             </ul>
           </div>
           <div class="group">
-            <h4>Escalations and recognition</h4>
+            <h4>Escalations</h4>
             <ul>
-              <li>Handled senior escalations on account compromises and appeals, and wrote briefs for Risk, Legal, Policy and Engineering leads.</li>
-              <li>Named <strong>Employee of the Month 8 times</strong> in Fraud Prevention.</li>
+              <li>Handled <strong>senior escalations</strong> on account compromises and appeals, giving Risk, Legal, Policy and Engineering leads clear briefs to decide on.</li>
             </ul>
           </div>
         </div>
@@ -746,17 +761,28 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
       </div>
       <div class="insights">
         <article class="post">
-          <div class="meta"><span class="label">AML · Mules</span><span class="label"><time datetime="2026-11">Nov 2026</time> · 3 min read</span></div>
-          <h3>Five signs an account is being used as a money mule</h3>
-          <p>Mule accounts rarely look criminal on their own. The pattern shows up when you compare what the account does with who the customer says they are.</p>
+          <div class="meta"><span class="label">AML · Typologies</span><span class="label"><time datetime="2026-11">Nov 2026</time> · 3 min read</span></div>
+          <h3>Placement, layering, integration: where a bank actually sees laundering</h3>
+          <p>The three stages are textbook, but each one leaves a different trail in account data. Knowing which stage you are looking at tells you what to ask next.</p>
+          <ul>
+            <li><strong>Placement.</strong> Dirty cash enters the system: deposits just under reporting limits, many ATMs, or cash-heavy businesses turning over far more than their size suggests.</li>
+            <li><strong>Layering.</strong> The money moves to break the trail: rapid transfers through mule accounts, hops across countries, conversion to crypto, round amounts with vague references.</li>
+            <li><strong>Integration.</strong> Funds come back looking clean: property, cars, loans repaid early, or "consulting" invoices from companies with no visible business.</li>
+          </ul>
+          <p>A retail bank sees placement and layering most often. Integration usually surfaces in EDD, when a customer's wealth story doesn't match their history.</p>
+          <p class="takeaway">Name the stage in your case notes. It makes the SAR clearer and the next question obvious.</p>
+        </article>
+        <article class="post">
+          <div class="meta"><span class="label">Fraud · Cards</span><span class="label"><time datetime="2026-11">Nov 2026</time> · 3 min read</span></div>
+          <h3>Card-not-present fraud: from card testing to cash-out</h3>
+          <p>Stolen card details are cheap. What fraudsters need is to know which ones still work, and that leaves a pattern before the real loss.</p>
           <ol>
-            <li><strong>Money in, money out.</strong> Funds leave within minutes or hours of arriving, and the balance keeps going back to near zero.</li>
-            <li><strong>Many unrelated senders.</strong> Inbound payments come from people with no visible link to the customer or to each other.</li>
-            <li><strong>Activity that doesn't fit the profile.</strong> A student or a low-income customer suddenly moves amounts far above their declared income.</li>
-            <li><strong>Shared access.</strong> The same device, IP address or login pattern appears on several unconnected accounts.</li>
-            <li><strong>Fast cash-out.</strong> Onward transfers go to crypto platforms, cash withdrawals or new payees in other countries.</li>
+            <li><strong>Testing.</strong> Tiny online payments, often €1 or less, across many merchants in minutes. Wrong-CVV and expiry declines cluster together.</li>
+            <li><strong>Cash-out.</strong> Once a card passes, high-value goods that resell easily, such as electronics, gift cards and travel, often shipped to a new address.</li>
+            <li><strong>Dispute.</strong> The real cardholder notices and disputes. The chargeback has to fit the card scheme's reason codes and time limits, or the loss stays with the bank.</li>
           </ol>
-          <p class="takeaway">One sign is a question. Three together is usually a case.</p>
+          <p>Card-present fraud looks different: counterfeit or lost cards, used in person, often far from where the customer actually is.</p>
+          <p class="takeaway">Catch the testing stage and the cash-out never happens. That's where velocity rules earn their keep.</p>
         </article>
         <article class="post">
           <div class="meta"><span class="label">Fraud · APP</span><span class="label"><time datetime="2026-11">Nov 2026</time> · 3 min read</span></div>
@@ -770,6 +796,31 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
             <li>A receiving account that already shows mule patterns.</li>
           </ul>
           <p class="takeaway">The best defence is speed: a well-timed warning before the payment, and a fast recall request to the receiving bank after it.</p>
+        </article>
+        <article class="post">
+          <div class="meta"><span class="label">AML · Mules</span><span class="label"><time datetime="2026-11">Nov 2026</time> · 3 min read</span></div>
+          <h3>Five signs an account is being used as a money mule</h3>
+          <p>Mule accounts rarely look criminal on their own. The pattern shows up when you compare what the account does with who the customer says they are.</p>
+          <ol>
+            <li><strong>Money in, money out.</strong> Funds leave within minutes or hours of arriving, and the balance keeps going back to near zero.</li>
+            <li><strong>Many unrelated senders.</strong> Inbound payments come from people with no visible link to the customer or to each other.</li>
+            <li><strong>Activity that doesn't fit the profile.</strong> A student or a low-income customer suddenly moves amounts far above their declared income.</li>
+            <li><strong>Shared access.</strong> The same device, IP address or login pattern appears on several unconnected accounts.</li>
+            <li><strong>Fast cash-out.</strong> Onward transfers go to crypto platforms, cash withdrawals or new payees in other countries.</li>
+          </ol>
+          <p class="takeaway">One sign is a question. Three together is usually a case.</p>
+        </article>
+        <article class="post">
+          <div class="meta"><span class="label">Fraud · SEPA</span><span class="label"><time datetime="2026-11">Nov 2026</time> · 3 min read</span></div>
+          <h3>SEPA Direct Debit fraud: when someone else holds the mandate</h3>
+          <p>A direct debit pulls money from an account on the strength of a mandate. If the mandate is fake, the account holder pays for something they never signed up for.</p>
+          <ul>
+            <li><strong>Stolen IBANs.</strong> A fraudster signs up for a service or subscription using someone else's IBAN. The collections land on the victim's account.</li>
+            <li><strong>Fake creditors.</strong> A "merchant" collects against invented mandates, moves the money out fast, and disappears before the returns arrive.</li>
+            <li><strong>Refund rights.</strong> Under the SEPA Core scheme, a customer can get a refund for an authorised debit within 8 weeks, and for an unauthorised one within 13 months.</li>
+          </ul>
+          <p>On the creditor side, the red flags are a new creditor with a sudden spike in collections, a high return rate, and balances that never build up.</p>
+          <p class="takeaway">The victim is protected. The loss lands wherever the money was collected, so creditor monitoring matters most.</p>
         </article>
         <article class="post">
           <div class="meta"><span class="label">EDD · KYC</span><span class="label"><time datetime="2026-11">Nov 2026</time> · 3 min read</span></div>
@@ -828,8 +879,8 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
     <section id="quiz" class="quiz-wrap">
       <div class="sec-head">
         <span class="label">Try it</span>
-        <h2>Spot the mule</h2>
-        <p>Three rounds, three customers each. Only one is a money mule. Every profile is invented.</p>
+        <h2>Spot the red flag</h2>
+        <p>Four rounds, four typologies: money mules, APP scams, card fraud and money laundering. Three customers each, one real risk. Every profile is invented.</p>
       </div>
       <div class="quiz" id="quizBox" aria-live="polite"></div>
     </section>
@@ -900,21 +951,26 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
 
   /* Spot the mule */
   var ROUNDS = [
-    { q: "Which account is the money mule?", a: 0, cards: [
+    { tag: "Money mule", q: "Which account is a money mule?", a: 0, cards: [
       { who: "A · Student, 19", rows: [["Declared", "€850 a month"], ["Last 30 days in", "€14,200 from 23 different people"], ["Money out", "92% leaves within 3 hours, to a crypto exchange"], ["Balance", "Usually under €50"]] },
       { who: "B · Café owner", rows: [["Account", "Business"], ["Last 30 days in", "€18,000 from about 410 card customers"], ["Money out", "Suppliers, rent, staff wages"], ["Balance", "Builds up through the month"]] },
       { who: "C · Nurse, 34", rows: [["Declared", "€3,300 a month"], ["Last 30 days in", "€3,350 salary from one employer"], ["Money out", "Card spending, rent, a savings transfer"], ["Balance", "Steady around €2,000"]] }
     ], why: "<strong>A is a collector mule.</strong> Inflow is about 17 times declared income, the senders have no visible link to the customer, and nearly everything leaves within hours for crypto. The café also has many payers, but that fits a business account and the money goes to ordinary costs." },
-    { q: "One of these is moving criminal money. Which?", a: 1, cards: [
-      { who: "A · Retired, 71", rows: [["Declared", "€1,900 pension"], ["Event", "€120,000 in one payment from a notary"], ["Money out", "Moved to own savings over two weeks"], ["Documents", "Inheritance paperwork on file"]] },
-      { who: "B · Unemployed, 24", rows: [["Declared", "No income"], ["Last week in", "Three deposits of about €9,800 each"], ["Money out", "Split across 11 brand-new payees in 4 countries, within 2 days"], ["Balance", "Back to near zero"]] },
-      { who: "C · Office worker, 29", rows: [["Declared", "€2,600 a month"], ["Last week in", "18 friends sent €60–€90 each"], ["Money out", "One payment to a travel agency"], ["Reference", "\"Barcelona trip\""]] }
-    ], why: "<strong>B is a distributor mule.</strong> Large deposits with no income behind them are split quickly across many new payees abroad. A is a classic windfall, cleared with one source of funds document. C looks like fan-in, but the money goes to one plausible place." },
-    { q: "Last round. The hardest typology to catch.", a: 2, cards: [
-      { who: "A · Engineer, 38", rows: [["Declared", "€5,200 a month"], ["Pattern", "Salary arrives, 90% moves out within an hour"], ["Destination", "Her own savings and investment accounts"], ["Duration", "Every month for three years"]] },
-      { who: "B · Family of four", rows: [["Accounts", "Four personal accounts"], ["Pattern", "All log in from the same tablet"], ["Money out", "Groceries, school fees, streaming"], ["Balance", "Normal for their incomes"]] },
-      { who: "C · Warehouse worker, 31", rows: [["Declared", "€2,100 a month"], ["Pattern", "Every 3–4 days, €300–€450 from a new sender"], ["Money out", "Forwarded 1–3 days later to the same overseas account"], ["Balance", "Never above €600"]] }
-    ], why: "<strong>C is a low-and-slow mule.</strong> Small amounts and a short delay keep each transfer under typical thresholds. The giveaway is the pattern over months: a new sender each time and one fixed destination abroad. A's fast sweep goes to her own accounts, and a shared family device is ordinary." }
+    { tag: "APP scam", q: "One of these customers is being scammed right now. Who?", a: 1, cards: [
+      { who: "A · Teacher, 41", rows: [["Payment", "€950 to the same landlord"], ["History", "Same amount, same day, for two years"], ["Session", "Normal login, no hesitation"], ["Reference", "\"Rent November\""]] },
+      { who: "B · Retired, 67", rows: [["Payment", "€8,500 to a payee added 10 minutes ago"], ["History", "Never sent more than €400 before"], ["Session", "On a phone call the whole time; retried as 3 smaller amounts after a warning"], ["Reference", "\"Safe account\""]] },
+      { who: "C · Engineer, 35", rows: [["Payment", "€8,000 to a car dealership"], ["History", "Saved toward it for a year"], ["Session", "Uploaded the invoice in chat"], ["Reference", "Invoice number matches"]] }
+    ], why: "<strong>B is an authorised push payment scam victim.</strong> She passes every security check because she is making the payment herself. The signals are behavioural: a first large payment to a brand-new payee, a live phone call, splitting after a warning, and a \"safe account\" reference that impersonation scammers use." },
+    { tag: "CNP fraud", q: "Which card is in a fraudster's hands?", a: 2, cards: [
+      { who: "A · Card ending 4417", rows: [["Where", "Hotel and airline, abroad, chip and PIN"], ["Context", "Customer is on holiday"], ["Pattern", "A few large but normal travel costs"], ["Declines", "None"]] },
+      { who: "B · Card ending 2093", rows: [["Where", "Streaming, phone bill, gym"], ["Pattern", "Same subscriptions every month"], ["Amounts", "€9.99 to €45"], ["Declines", "None"]] },
+      { who: "C · Card ending 7781", rows: [["Where", "Online only, 38 different merchants"], ["Pattern", "€1–€2 attempts within 10 minutes, then €950 of electronics"], ["Declines", "21 wrong-CVV declines"], ["Shipping", "New address, never used before"]] }
+    ], why: "<strong>C is card testing followed by cash-out.</strong> Stolen card details are checked with tiny online payments across many merchants, with wrong-CVV declines while the fraudster guesses. Once a payment works, a high-value, easily resold purchase ships to a new address. The holiday spending is card-present and fits the customer." },
+    { tag: "Laundering", q: "Last round. Which customer is laundering cash?", a: 0, cards: [
+      { who: "A · Retail worker, 28", rows: [["Declared", "€1,900 a month"], ["Cash in", "14 deposits of €9,200–€9,900 in 8 weeks, at different ATMs"], ["Money out", "Wired on to a trading company abroad"], ["Documents", "None given"]] },
+      { who: "B · Retired, 71", rows: [["Declared", "€1,900 pension"], ["Event", "€120,000 in one payment from a notary"], ["Money out", "Moved to own savings over two weeks"], ["Documents", "Inheritance paperwork on file"]] },
+      { who: "C · Market stall owner", rows: [["Account", "Business"], ["Cash in", "€600–€1,400 most weekends"], ["Pattern", "Peaks in summer and December"], ["Money out", "Wholesaler, rent, taxes"]] }
+    ], why: "<strong>A is structuring cash into the system.</strong> Deposits stay just under the €10,000 reporting mark, are spread across ATMs, and add up to far more than he earns. Wiring them on to a foreign trading company is the layering step. The inheritance is a one-off with documents, and the stall's cash follows its season." }
   ];
   var qb = document.getElementById("quizBox"), qi = 0, qscore = 0;
   function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
@@ -922,7 +978,7 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
     qb.textContent = "";
     var R = ROUNDS[qi], top = el("div", "quiz-top");
     var qh = el("h3", null, R.q); qh.tabIndex = -1; top.appendChild(qh);
-    top.appendChild(el("span", "label", "Round " + (qi + 1) + " of " + ROUNDS.length + " · Score " + qscore));
+    top.appendChild(el("span", "label", R.tag + " · Round " + (qi + 1) + " of " + ROUNDS.length + " · Score " + qscore));
     qb.appendChild(top);
     var grid = el("div", "qcards"), btns = [];
     R.cards.forEach(function (c, i) {
@@ -942,10 +998,10 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
     if (ok) qscore++;
     btns.forEach(function (b, k) {
       b.disabled = true;
-      if (k === R.a) { b.classList.add("right"); b.querySelector(".verdict").textContent = "◆ Mule"; }
-      else { b.classList.add("wrong"); b.querySelector(".verdict").textContent = k === i ? "Your pick: legitimate" : "Legitimate"; }
+      if (k === R.a) { b.classList.add("right"); b.querySelector(".verdict").textContent = "◆ " + R.tag; }
+      else { b.classList.add("wrong"); b.querySelector(".verdict").textContent = k === i ? "Your pick: genuine" : "Genuine"; }
     });
-    qb.querySelector(".quiz-top .label").textContent = "Round " + (qi + 1) + " of " + ROUNDS.length + " · Score " + qscore;
+    qb.querySelector(".quiz-top .label").textContent = R.tag + " · Round " + (qi + 1) + " of " + ROUNDS.length + " · Score " + qscore;
     var ex = el("div", "qexplain");
     ex.appendChild(el("span", "label", ok ? "Correct" : "Not quite"));
     var p = el("p"); p.innerHTML = R.why; ex.appendChild(p);
@@ -958,10 +1014,10 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
   }
   function finish() {
     qb.textContent = "";
-    var top = el("div", "quiz-top"), h = el("h3", null, "You spotted " + qscore + " of " + ROUNDS.length + " mules");
+    var top = el("div", "quiz-top"), h = el("h3", null, "You spotted " + qscore + " of " + ROUNDS.length + " red flags");
     h.tabIndex = -1; top.appendChild(h); qb.appendChild(top);
     var ex = el("div", "qexplain");
-    ex.appendChild(el("p", null, qscore === 3 ? "Investigator instincts. Each round was a different typology: collector, distributor, and low-and-slow." : "Each round was a different typology: collector, distributor, and low-and-slow. In real cases the legitimate look-alikes are what take the time."));
+    ex.appendChild(el("p", null, qscore === ROUNDS.length ? "Investigator instincts. Four rounds, four typologies: a money mule, an APP scam, card testing and cash structuring." : "Four rounds, four typologies: a money mule, an APP scam, card testing and cash structuring. In real cases, the genuine look-alikes are what take the time."));
     qb.appendChild(ex);
     var nav = el("div", "qnav"), again = el("button", "btn ghost", "Play again"); again.type = "button";
     again.addEventListener("click", function () { qi = 0; qscore = 0; renderRound(); });
@@ -1080,6 +1136,7 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
   }
   var seed = 7; function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
   var W = 0, H = 0, nodes = [], edges = [], adj = [], path = [], pathStart = 0, pulses = [];
+  var PATS = ["Layering", "Pass-through", "Mule network", "Structuring", "Fan-out"], patI = 0;
   var JUR = ["LT","DE","NL","FR","ES","IT","PL","IE","BE","LU","AT","PT"];
 
   function build() {
@@ -1114,6 +1171,7 @@ footer p { color: var(--muted); max-width: 60ch; font-size: 1.05rem; }
     path = p; pathStart = t;
     var hops = document.getElementById("roHops"), jur = document.getElementById("roJur");
     if (hops) hops.textContent = (p.length - 1) + " hops";
+    var pat = document.getElementById("roPat"); if (pat) { pat.textContent = PATS[patI % PATS.length]; patI++; }
     if (jur) { var j = []; for (var i = 0; i < 3; i++) { var c = JUR[Math.floor(rnd() * JUR.length)]; if (j.indexOf(c) < 0) j.push(c); } jur.textContent = j.join(" · "); }
   }
   function alpha(hex, a) {
